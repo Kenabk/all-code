@@ -1,0 +1,12 @@
+the way to scape scope is creating the variable outside the scope. ({})is scope
+
+
+('') is defaul when you use variables
+("") u can use it when u u have ' in the variable
+(``) let us add other things inside by using (${}) its like display inline 
+
+
+
+variable is is a container (they can store value)
+if statement , if else , else (they create scope)
+function let u re-use code (they create scope) u have to add this to print is (function-name();) look at if.html 
