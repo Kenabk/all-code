@@ -1,0 +1,269 @@
+body{
+  margin: 0 0 20px 0;
+  font-family: Roboto, arial, sans-serif;
+  color: #21243D;
+}
+/*-- header begin--*/
+.header
+{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  margin-right: -5%;
+  padding: 0 10% 0 10%;
+  
+}
+.menu
+{
+  visibility: hidden;
+}
+.page-name
+{
+  margin: 0 1% 0 1%;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+.page-name:hover
+{
+  color: #FF6464;
+  cursor: pointer;
+}
+.page-name:active
+{
+  opacity: 0.7;
+}
+/*-- header end --*/
+/*-- section-1 begin --*/
+.section-1
+{
+  padding: 0 15% 0 13%;
+}
+h1
+{
+  font-size: 35px;
+  line-height: 0;
+}
+.sec-3-room
+{
+  display: flex;
+  border-bottom: gainsboro solid 1px;
+  padding-bottom: 2%;
+  padding-top: 3%;
+}
+.sec-3-img
+{
+  width: 60%;
+  margin-right: 2%;
+  aspect-ratio: 10/1;
+}
+.sec-3-pic
+{
+  height: 100%;
+  border-radius: 10px;
+  width: 100%;
+}
+.img-info
+{
+  margin-top: -2%;
+}
+.sec-3-h2
+{
+  font-size: 30px;
+  line-height: 0;
+  margin-top: 5%;
+}
+.sec-3-more-info
+{
+  display: flex;
+  line-height: 0;
+  margin-bottom: 2%;
+  align-items: center;
+}
+.year
+{
+  background-color: #142850;;
+  padding: 2px 1.5% 2px 1.5%;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 900;
+  border-radius: 20px;
+  margin-right: 6%;
+}
+.img-name
+{
+  font-size: 25px;
+  font-weight: 500;
+  color: rgb(158, 158, 158);
+}
+.room-info-3
+{
+  margin-top: 0;
+  width: 95%;
+}
+/*-- section-1 end --*/
+/*-- section-2 begin --*/
+.section-2
+{
+  padding: 0 13% 0 13%;
+  margin-top: 10%;
+}
+.logo
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-img
+{
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  cursor: pointer;
+}
+.copy
+{
+  text-align: center;
+  margin-top: 1%;
+  font-size: 13px;
+  margin-bottom: 4%;
+}
+/*-- section-2 end --*/
+@media (max-width: 412px)
+{
+  .header
+  {
+  position: absolute;
+  visibility: hidden;
+  }
+  .hamburger
+  {
+    position: relative;
+    visibility: visible;
+  }
+  *, *::after, *::before
+{
+  box-sizing: border-box;
+}
+:root
+{
+  --x-width:calc(var(--hamburger-height) * 1.41421356237);
+  --bar-width:25px;
+  --bar-height:4px;
+  --gap:3px;
+  --background-color:white;
+  --foreground-color:#333;
+  --hamburger-margin-top:30px;
+  --hamburger-margin:90%;
+  --animation-time:200ms ease-in-out;
+  --hamburger-height:calc(var(--bar-height) * 3 + var(--gap) * 2);
+  
+}
+.hamburger::after,
+.hamburger::before,
+.hamburger .menu
+{
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground-color);
+  border-radius: 99999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-time), width var(--animation-time),
+   rotate var(--animation-time), translate var(--animation-time);
+}
+.hamburger
+{
+  
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  position: absolute;
+  top: var(--hamburger-margin-top);
+  z-index: 10;
+  cursor: pointer;
+  left: var(--hamburger-margin);
+}
+.hamburger:has(input:checked)::before
+{
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--hamburger-height)/ -5);
+}
+.hamburger:has(input:checked)::after
+{
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc((--hamburger-height)/ 5);
+}
+.hamburger .menu{
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  outline: none;
+}
+.hamburger .menu:checked
+{
+  opacity: 0;
+  width: 0;
+}
+.hamburger
+{
+  transition: visibility 1s;
+}
+.menu
+{
+  visibility: visible;
+}
+.header1:has(input:checked) .header
+{
+  visibility: visible;
+  margin-top: -26%;
+  margin-left: 8%;
+}
+.page-name{
+  margin-left: 10px;
+}
+
+/*-- section-1 begin --*/
+.section-1
+{
+  padding: 0 2% 0 2%;
+}
+h1
+{
+  font-size: 35px;
+  margin-top: 30%;
+  line-height: 10px;
+}
+.sec-3-room
+{
+  display: block;
+}
+.sec-3-img
+{
+  margin: 0%;
+  aspect-ratio: 2/1;
+  width: 100%;
+}
+
+.img-info
+{
+  margin-top: 2%;
+}
+.sec-3-h2
+{
+  font-size: 30px;
+  line-height: 0;
+  margin-top: 5%;
+}
+/*-- section-1 end --*/
+.logo-img
+{
+  width: 20px;
+}
+}

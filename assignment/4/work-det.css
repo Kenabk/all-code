@@ -1,0 +1,268 @@
+body{
+  margin: 0 0 20px 0;
+  font-family: Roboto, arial, sans-serif;
+  color: #21243D;
+}
+/*-- header begin--*/
+body{
+  margin: 0 0 20px 0;
+  font-family: Roboto, arial, sans-serif;
+  color: #21243D;
+}
+/*-- header begin--*/
+.header
+{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 50px;
+  margin-right: -5%;
+  padding: 0 10% 0 10%;
+}
+.menu
+{
+  visibility: hidden;
+}
+.page-name
+{
+  margin: 0 1% 0 1%;
+  font-size: 20px;
+  font-weight: 700;
+  transition: opacity 0.15s;
+  text-decoration: none;
+}
+.page-name:hover
+{
+  color: #FF6464;
+  cursor: pointer;
+}
+.page-name:active
+{
+  opacity: 0.7;
+}
+/*-- header end --*/
+/*-- section-1 begin --*/
+.section-1
+{
+  padding: 5% 15% 0 15%;
+}
+.menu
+{
+  visibility: hidden;
+}
+.main
+{
+  max-width: 450px;
+  line-height: 45px;
+  margin-bottom: 2%;
+}
+.button
+{
+  display: flex;
+  align-items: center;
+}
+.date
+{
+  background-color: #FF7C7C;
+  color: white;
+  border: none;
+  padding: 0.5% 1% 0.5% 1%;
+  border-radius: 15px;
+  font-weight: 700;
+  margin-right: 3%;
+}
+.det-info
+{
+  max-width: 630px;
+}
+/*-- section-1 end --*/
+/*-- section-2 begin --*/
+.section-2
+{
+  padding: 1% 20% 0 20%;
+}
+.cont-img,
+.cont-img
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 500px;
+}
+.big-img,
+.big-img1
+{
+  width: 100%;
+  height: 100%;
+}
+.big-img1
+{
+  margin-top: 10px;
+}
+/*-- section-2 end --*/
+/*-- section-2 begin --*/
+.section-3
+{
+  padding: 0 13% 0 13%;
+  margin-top: 10%;
+}
+.logo
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo-img
+{
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  cursor: pointer;
+}
+.copy
+{
+  text-align: center;
+  margin-top: 1%;
+  font-size: 13px;
+  margin-bottom: 4%;
+}
+/*-- section-2 end --*/
+@media (max-width: 412px)
+{
+ 
+  .header
+  {
+  position: absolute;
+  visibility: hidden;
+  }
+  .hamburger
+  {
+    position: relative;
+    visibility: visible;
+  }
+  *, *::after, *::before
+{
+  box-sizing: border-box;
+}
+:root
+{
+  --x-width:calc(var(--hamburger-height) * 1.41421356237);
+  --bar-width:25px;
+  --bar-height:4px;
+  --gap:3px;
+  --background-color:white;
+  --foreground-color:#333;
+  --hamburger-margin-top:30px;
+  --hamburger-margin:90%;
+  --animation-time:200ms ease-in-out;
+  --hamburger-height:calc(var(--bar-height) * 3 + var(--gap) * 2);
+  
+}
+.hamburger::after,
+.hamburger::before,
+.hamburger .menu
+{
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground-color);
+  border-radius: 99999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-time), width var(--animation-time),
+   rotate var(--animation-time), translate var(--animation-time);
+}
+.hamburger
+{
+  
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  position: absolute;
+  top: var(--hamburger-margin-top);
+  z-index: 10;
+  cursor: pointer;
+  left: var(--hamburger-margin);
+}
+.hamburger:has(input:checked)::before
+{
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--hamburger-height)/ -5);
+}
+.hamburger:has(input:checked)::after
+{
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc((--hamburger-height)/ 5);
+}
+.hamburger .menu{
+  appearance: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  outline: none;
+}
+.hamburger .menu:checked
+{
+  opacity: 0;
+  width: 0;
+}
+.header1:has(input:checked) .header
+  {
+    visibility: visible;
+    margin-top: 3%;
+    margin-left: 5%;
+  }
+  .page-name{
+    margin-left: 10px;
+  }
+  .menu
+{
+  visibility: visible;
+}
+/*-- section-1 begin --*/
+.section-1
+{
+  padding: 5% 5% 0 5%;
+}
+.main
+{
+  margin-top: 20%;
+  max-width: 450px;
+  line-height: 45px;
+  margin-bottom: 2%;
+}
+/*-- section-1 end --*/
+/*-- section-2 begin --*/
+.section-2
+{
+  padding: 1% 2% 0 2%;
+}
+.cont-img,
+.cont-img
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 300px;
+}
+.big-img,
+.big-img1
+{
+  width: 100%;
+  height: 100%;
+}
+.big-img1
+{
+  margin-top: 10px;
+}
+/*-- section-2 end --*/
+}
+/*-- section-3 begin --*/
+.section-3
+{
+  margin-top: 30%;
+}
+.logo-img
+{
+  width: 20px;
+}
+/*-- section-2 end --*/
